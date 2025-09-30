@@ -1,0 +1,512 @@
+\chapter{第二章}
+
+\section{图}
+
+图要精选，要具有自明性，切忌与表及文字表述重复。
+
+图要清楚，但坐标比例不要过分放大，同一图上不同曲线的点要分别用不同形状的标识符标出。
+
+图中的术语、符号、单位等应与正文表述中所用一致。
+
+图序与图名，例如：“图2.1  发展中国家经济增长速度的比较（1960-2000）”。
+
+图2.1是图序，是“第2章第1个图”的序号，其余类推。图序与图名置于图的下方，采用宋体11pt字居中书写，段前空6磅，段后空12磅，行距为单倍行距，图序与图名文字之间空一个汉字符宽度。
+
+图中标注的文字采用9～10.5pt，以能够清晰阅读为标准。专用名字代号、单位可采用外文表示，坐标轴题名、词组、描述性的词语均须采用国家通用语言文字。
+
+如果一个图由两个或两个以上分图组成时，各分图分别以(a)、(b)、(c)……作为图序，并须有分图名。
+
+
+
+\subsection{图片插入演示}
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.5\textwidth]{xju_logo}
+	\caption{图片名称}
+	\label{xju_logo}
+\end{figure}
+
+图片引用演示：图\ref{xju_logo}。
+
+\subsubsection{多图插入演示}
+
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[t]{0.24\linewidth}
+		\captionsetup{justification=centering} %子图caption居中
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{第一个子图}
+			\label{xju_logo1:subfig1}
+		\end{minipage}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.24\linewidth}
+		\captionsetup{justification=centering} %子图caption居中
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{第二个子图}
+			\label{xju_logo1:subfig2}
+		\end{minipage}
+	\end{subfigure}
+	\caption{并排排布局示例。(a)表示什么什么什么么什么什么什么什么什什么什么什么什么什么什么么什么什么什么什么什么什么什么什么。(b)表示什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么。}
+	\label{xju_logo1}
+\end{figure}
+
+多图子图引用演示：图\ref{xju_logo1:subfig1}。
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[t]{0.15\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}\\
+	\begin{subfigure}[t]{0.15\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}
+	\caption{竖排布局示例}
+	\label{xju_logo2}
+\end{figure}
+
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[t]{0.13\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo} \vspace{-1ex} \vfill
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.13\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=1\linewidth]{xju_logo} \vspace{-1ex} \vfill
+			\includegraphics[width=1\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}
+	\caption{竖排多图横排布局}
+	\label{xju_logo3}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[t]{0.3\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=0.45\linewidth]{xju_logo}
+			\includegraphics[width=0.45\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}\\
+	\begin{subfigure}[t]{0.3\linewidth}
+		\captionsetup{justification=centering}
+		\begin{minipage}[b]{1\linewidth}
+			\includegraphics[width=0.45\linewidth]{xju_logo}
+			\includegraphics[width=0.45\linewidth]{xju_logo}
+			\caption{}
+		\end{minipage}
+	\end{subfigure}
+	\caption{横排多图竖排布局}
+	\label{xju_logo4}
+\end{figure}
+	
+\section{表}
+	
+\begin{table}[htb]
+	\centering
+	\caption{表格为三线表}
+	\label{table1}
+	\begin{tabular}{llllll}
+		\toprule[1.5pt]
+		& A & \emph{B} & \textit{C} & D & E \\
+		\midrule[1pt]
+		1 & 000 & 111 & Aa & - & 表格	\\
+		2 & 000 & 111 & Aa & - & 表格	\\
+		3 & 000 & 111 & Aa & - & 表格	\\
+		\bottomrule[1.5pt]
+	\end{tabular}
+\end{table}
+
+表格引用演示：表\ref{table1}。
+
+\begin{table}[htb]
+	\noindent\begin{minipage}{0.5\textwidth}
+		\centering
+		\caption{第一个并排子表格}
+		\label{table2:subtab1}
+		\begin{tabular}{p{2cm}p{2cm}}
+			\toprule[1.5pt]
+			aaa & bbb \\
+			\midrule[1pt]
+			111 & 111 \\
+			111 & 111 \\
+			111 & 111 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\caption{第二个并排子表格}
+		\label{table2:subtab2}
+		\begin{tabular}{p{2cm}p{2cm}}
+			\toprule[1.5pt]
+			ccc & ddd \\
+			\midrule[1pt]
+			222 & 222 \\
+			222 & 222 \\
+			222 & 222 \\
+			\bottomrule[1.5pt]
+		\end{tabular}
+	\end{minipage}
+\end{table}
+
+子表格引用演示：表\ref{table2:subtab1}。
+
+\begin{table}[htb]
+	\centering
+	\begin{minipage}[t]{6cm} % 如果想在表格中使用脚注，minipage是个不错的办法
+		\caption{表格脚注演示：表格名表格名表格名表格名表格名表格名}
+		\label{table3}
+		\begin{tabular*}{\linewidth}{lp{6cm}}
+			\toprule[1.5pt]
+			{\heiti 内容} & {\heiti 内容} \\
+			\midrule[1pt]
+			aaa & 内容内容内容\footnote{表格中的脚注}\\
+			bbb & 内容内容内容\\
+			ccc & 内容内容内容\\
+			ddd\footnote{再来一个} & 内容\\
+			\bottomrule[1.5pt]
+		\end{tabular*}
+	\end{minipage}
+\end{table}
+
+
+\begin{table}[htb]
+	\centering
+	\caption{表格}
+	\label{table4}
+	\begin{minipage}[c]{0.8\linewidth}
+		\begin{tabular*}{\linewidth}{lp{10cm}}
+			\toprule[1.5pt]
+			内容 & 内容 \\
+			\midrule[1pt]
+			aaa$^{*}$ & 内容内容内容内容内容内容内容内容内容内容内容内容内容\\
+			bbb & 内容内容内容内容内容内容内容内容内容内容\\
+			ccc & 内容内容内容内容内容内容内容内容内容内容内容内容内容内容\\
+			ddd & 内容内容内容内容内容内容内$^{**}$容内容内容内容\\
+			\bottomrule[1.5pt]
+		\end{tabular*}\\[2pt]
+		注：数据来源。\\
+		*：a部\\
+		**：b部
+	\end{minipage}
+\end{table}
+
+
+\subsection{跨页表格}
+
+\begin{longtable}[h]{c*{8}{c}}
+	\caption{数据}
+	\label{table2}\\
+	\toprule[1.5pt]
+	表格 & \multicolumn{1}{c}{列1} & \multicolumn{1}{c}{列2} & \multicolumn{1}{c}{列3} & \multicolumn{1}{c}{列4}
+	& \multicolumn{1}{c}{列5} & \multicolumn{1}{c}{列6} & \multicolumn{1}{c}{列7} & \multicolumn{1}{c}{列8} \\
+	& \multicolumn{1}{c}{a} & \multicolumn{1}{c}{b} &
+	\multicolumn{1}{c}{c} & \multicolumn{1}{c}{d} & \multicolumn{1}{c}{e} &  \multicolumn{1}{c}{f} & \multicolumn{1}{c}{g} & \multicolumn{1}{c}{h} \\
+	\midrule[1pt]
+	% 第一页表头内容
+	\endfirsthead
+		\multicolumn{9}{c}{续表~\thetable\hskip1em 数据} \\
+	\hline
+	% 跨页表头内容
+	\endhead
+	\hline
+	% 跨页表尾内容
+	\endfoot
+	% 最后一页表尾内容
+	\endlastfoot
+	A & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	B & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	C & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	D & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	E & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	F & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	G & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	H & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	I & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	J & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	K & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	L & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	M & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	N & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	O & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	P & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	Q & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	R & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	S & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	T & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	U & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+	\bottomrule[1.5pt]
+\end{longtable}
+
+
+\section{表达式}
+
+表达式主要是指数字表达式，例如数学表达式，也包括文字表达式。
+
+表达式采用与正文相同的字号居中书写，或另起一段空两个汉字符书写，一旦采用了上述两种格式中的一种，全文都要使用同一种格式。表达式应有序号，序号用括号括起来置于表达式右边行末，序号与表达式之间不加任何连线。
+
+表达式行的行距为单倍行距，段前空6磅，段后空6磅。当表达式不是独立成行书写时，有表达式的段落的行距为单倍行距，段前空3磅，段后空3磅。
+
+文中的表、图、表达式一律采用阿拉伯数字分章编号，例如：“表3.2”，“图2.5”，式“（3-1）”等。表达式在文字叙述中采用“式（3-1）”形式，在编号中用“（3-1）”形式。若图或表中有附注，采用英文小写字母顺序编号，附注写在图或表的下方。
+
+\subsection{数学公式}
+
+公式引用演示：公式\ref{equation1}。
+
+\begin{equation}
+	\label{equation1}
+	y=kx+b
+\end{equation}
+
+\hspace{\ccwd} $x$ $\textemdash$ 解释什么什么；
+
+\hspace{\ccwd} $k$ $\textemdash$ 解释什么什么；
+
+\hspace{\ccwd} $b$ $\textemdash$ 解释什么什么；
+
+\hspace{\ccwd} $y$ $\textemdash$ 解释什么什么；
+
+\begin{align}
+	y &= \sqrt{\frac{2}{\pi}} \int_{0}^{x} e^{-t^2}\cos(t) \, dt \\
+	F &= X + Y
+\end{align}
+
+\begin{equation}
+	\left\{\begin{array}{l}
+		\nabla f({\mbox{\boldmath $x$}}^*)-\sum\limits_{j=1}^p\lambda_j\nabla g_j({\mbox{\boldmath $x$}}^*)=0\\[0.3cm]
+		\lambda_jg_j({\mbox{\boldmath $x$}}^*)=0,\quad j=1,2,\cdots,p\\[0.2cm]
+		\lambda_j\ge 0,\quad j=1,2,\cdots,p.
+	\end{array}\right.
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\int_{−\infty}^{\infty}f(x)dx & = \frac{1}{2\lambda}\int_{−\infty}^{\infty}e^{−\frac{|x−\mu|}{\lambda}}dx \\
+		& = \frac{1}{2}\int_{−\infty}^{\infty}e^{−|t|}dt \\
+		& = 1
+	\end{aligned}
+\end{equation}
+
+\[
+A = \begin{bmatrix}
+	a & b \\
+	c & d
+\end{bmatrix},
+B = \begin{bmatrix}
+	e & f \\
+	g & h
+\end{bmatrix},
+C = \begin{bmatrix}
+	i & j \\
+	k & l
+\end{bmatrix},
+D = \begin{bmatrix}
+	m & n \\
+	o & p
+\end{bmatrix},
+E = \begin{bmatrix}
+	q & r \\
+	s & t
+\end{bmatrix}
+\]
+
+
+\subsection{数学相关}
+
+从这里开始，学校就没有严格的格式要求，已发表的硕士论文也没有一个统一的格式，下面是本模板给出的方案，请使用者自行判断。
+
+引用：定理\ref{theorem1}。
+
+\begin{theorem}[\cite{born1981}]
+	\label{theorem1}
+	
+	%	\setlength{\baselineskip}{20pt}         % 基准行间距
+	%	\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始定理。。。
+\end{theorem}
+
+\begin{lemma}
+	\label{lemma1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始引理。。。
+\end{lemma}
+
+\begin{proposition}
+	\label{proposition1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始命题。。。
+\end{proposition}
+
+\begin{corollary}
+	\label{corollary1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始推论。。。
+\end{corollary}
+
+\begin{example}
+	\label{example1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始举例。。。
+\end{example}
+
+\begin{definition}
+	\label{definition1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始定义。。。
+\end{definition}
+
+\begin{remark}
+	\label{remark1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始。。。
+\end{remark}
+
+\begin{solution}
+	\label{solution1}
+	%\setlength{\baselineskip}{20pt}         % 基准行间距
+	%\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始。。。
+	$\hfill\blacksquare$ %% 以方块结尾
+\end{solution}
+
+\begin{proof*} %% 证明不编号
+	%	\setlength{\baselineskip}{20pt}         % 基准行间距
+	%	\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+	开始证明。。。
+	\begin{equation}
+		A = \begin{bmatrix}
+			1 & 1 & 1 \\
+			1 & 1 & 1 \\
+			2 & 1 & 1
+		\end{bmatrix}
+	\end{equation}
+	
+	$\hfill\blacksquare$ %% 以黑方块结尾
+\end{proof*}
+
+
+\subsection{编程相关}
+
+\begin{algorithm}
+	\caption{算法示例}
+	\label{alg1}
+	\begin{algorithmic}[1]
+		\REQUIRE 相关输入。。。。
+		
+		\ENSURE 相关输出。。。
+		
+		\STATE 算法描述  % 只占用一个行号
+		\FOR{$i \gets 1\cdots N$}
+		\STATE 算法描述
+		\FOR{\textbf{each} $j \gets 1\cdots K$}
+		\STATE 算法描述
+		\ENDFOR
+		\ENDFOR
+		\REPEAT
+		\REPEAT
+		\STATE 令$\tau\gets\tau+1$
+		\UNTIL 内循环迭代终止条件
+		\STATE 。。。
+		\UNTIL 外循环迭代终止条件
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{center}
+	\fbox{\parbox[t]{\textwidth}{
+					aaa\\
+					bbb\\
+					ccc}}
+\end{center}
+
+以下代码为啥啥啥。。。
+
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <string>
+
+class Person {
+	public:
+	// 构造函数Aa
+	Person(std::string name, int age, std::string gender) {
+		this->name = name;
+		this->age = age;
+		this->gender = gender;
+	}
+	
+	// 成员函数 Aa
+	void introduce() {
+		std::cout << "My name is " << name << ", I'm " << age << " years old, and I'm a " << gender << "." << std::endl;
+	}
+	
+	private:
+	std::string name;
+	int age;
+	std::string gender;
+};
+
+int main() {
+	// 创建一个 Person 对象
+	Person p("Tom", 25, "male");
+	
+	// 调用成员函数
+	p.introduce();
+	
+	return 0;
+}
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=python]
+from datetime import datetime   
+from playsound import playsound
+alarm_time = input("Enter the time of alarm to be set:HH:MM:SS\n")
+alarm_hour=alarm_time[0:2]
+alarm_minute=alarm_time[3:5]
+alarm_seconds=alarm_time[6:8]
+alarm_period = alarm_time[9:11].upper()
+print("Setting up alarm..")
+while True:
+	now = datetime.now()
+	current_hour = now.strftime("%I")
+	current_minute = now.strftime("%M")
+	current_seconds = now.strftime("%S")
+	current_period = now.strftime("%p")
+		if(alarm_period==current_period):
+			if(alarm_hour==current_hour):
+				if(alarm_minute==current_minute):
+					if(alarm_seconds==current_seconds):
+					print("Wake Up!")
+					playsound('audio.mp3') ## download the alarm sound from link
+					break
+
+\end{lstlisting}
+
