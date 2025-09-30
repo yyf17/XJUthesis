@@ -1,0 +1,74 @@
+\documentclass[UTF8]{xjuthesis}
+
+\graphicspath{{figures/}}
+
+%学位类型
+\degreetype{硕士}
+
+%中文题目
+\cntitle{新疆大学硕士学位论文 \LaTeX \\ 模板使用指南（非官方）}
+%英文题目
+\entitle{Master thesis of Xinjiang university guide to using \LaTeX ~template \\ (unofficial)}
+
+\author{某·某}                            % 研究生姓名
+\subject{某某工程}                        % 学科
+\researchinterest{某某某与某某某}          % 研究方向
+\advisor{某某某}                             % 导师姓名
+\advisortitle{教授}                        % 导师职称
+
+\defenddate{20xx年xx月xx日}                % 论文答辩日期
+\authorizedate{~~~~~~~~~年~~~~~月~~~~~日}             % 学位授予日期
+
+\declarationdate{20xx年x月xx日}
+
+\begin{document}
+
+
+%\includepdf[pages={1}]{1.pdf}
+
+%封面
+\maketitilepage
+
+\frontmatter
+
+%摘要
+\input{src/abstract}
+
+%目录
+\tableofcontents
+
+% 符号对照表
+\input{src/denotation}
+
+\mainmatter
+
+%正文
+\input{src/chapter1}
+\input{src/chapter2}
+\input{src/chapter3}
+\input{src/chapter4}
+\input{src/chapter5}
+
+%参考文献
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{ref/ref.bib}
+
+%附录
+
+\appendix
+\backmatter
+\input{src/appendix}
+
+
+%致谢
+\input{src/acknowledgements}
+
+%声明
+\makecopyright
+
+%研究成果
+\input{src/achievements}
+
+
+\end{document}

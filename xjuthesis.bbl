@@ -1,0 +1,26 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[玻恩M.(1981)]{born1981}
+玻恩M.
+\newblock
+  标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题\allowbreak[M].
+\newblock  彭石安, 译.
+\newblock 石家庄: 河北人民出版社, 1981: 2.
+
+\bibitem[Knuth(1984)]{knuth1984}
+KNUTH D~E.
+\newblock Literate programming\allowbreak[J].
+\newblock The Computer Journal, 1984, 27\allowbreak (2): 97-111.
+
+\end{thebibliography}
